@@ -6,6 +6,9 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-360x240', 360, 240, true );
 add_image_size( 'featured-1200x400', 1200, 400, true );
 
+add_editor_style( 'css/custom-editor-styles.css' );
+
+
 
 // Includes
 include( get_template_directory() . '/includes/front/enqueue.php' );

@@ -1,0 +1,189 @@
+@import url(_bootstrap.min.css);
+@import url(_font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.relative {
+  position: relative; }
+
+.overflow {
+  overflow: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/* IE < 8 */
+body, html {
+  height: 100%; }
+
+input {
+  line-height: normal; }
+
+*:focus, a:focus, a:active {
+  outline: none;
+  color: inherit;
+  text-decoration: inherit; }
+
+br {
+  font-size: inherit;
+  line-height: inherit; }
+
+section {
+  display: block; }
+
+img {
+  max-width: 100%; }
+
+a {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+i {
+  color: inherit;
+  font-size: inherit; }
+
+/*--- Typography ---*/
+/*--- Common proctice to hide slider and show it when its fully loaded */
+.the-carousel {
+  display: none; }
+
+.the-carousel.slick-initialized {
+  display: block; }
+
+/*--- Slideout Menu Styles ---*/
+#menu {
+  background-color: #ccc; }
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none; }
+
+.slideout-menu-left {
+  left: 0; }
+
+.slideout-menu-right {
+  right: 0; }
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF;
+  /* A background-color is required */
+  min-height: 100vh; }
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden; }
+
+.slideout-open .slideout-menu {
+  display: block; }
+
+/*--- Site Specific Variables ---*/
+/*--- Global Styles ---*/
+body, * {
+  font-family: "Roboto", sans-serif;
+  color: #383838; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 900; }
+
+input, button, select, textarea, .form-control {
+  font-family: "Roboto", sans-serif; }
+
+#tinymce {
+  padding: 15px !important; }
+  #tinymce h1 {
+    margin-bottom: 20px; }
+  #tinymce h2 {
+    margin-bottom: 20px; }
+  #tinymce h3 {
+    margin-bottom: 20px; }
+  #tinymce h4 {
+    margin-bottom: 20px; }
+  #tinymce h5 {
+    margin-bottom: 20px; }
+  #tinymce h6 {
+    margin-bottom: 20px; }
+  #tinymce .alignnone {
+    margin: 0px 0px 20px 0px; }
+  #tinymce .aligncenter,
+  #tinymce div.aligncenter {
+    display: block;
+    margin: 0px auto 20px auto; }
+  #tinymce .alignright {
+    float: right;
+    margin: 0px 0px 20px 20px; }
+  #tinymce .alignleft {
+    float: left;
+    margin: 0px 20px 20px 0px; }
+  #tinymce a img.alignright {
+    float: right;
+    margin: 0px 0px 20px 20px; }
+  #tinymce a img.alignnone {
+    margin: 0px 0px 20px 0px; }
+  #tinymce a img.alignleft {
+    float: left;
+    margin: 0px 20px 20px 0px; }
+  #tinymce a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  #tinymce img {
+    height: auto; }
+  #tinymce p {
+    margin-bottom: 20px; }
+  #tinymce ul, #tinymce ol {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 20px;
+    overflow: hidden; }
+  #tinymce a {
+    color: #383838;
+    text-decoration: underline; }
+  #tinymce a:hover {
+    text-decoration: none; }
+  #tinymce p {
+    margin: 0px 0px 20px 0px; }
+  #tinymce blockquote {
+    margin: 0px 0px 20px 0px; }
+    #tinymce blockquote p:last-child {
+      margin-bottom: 0px; }
+
+/*# sourceMappingURL=custom-editor-styles.css.map */
