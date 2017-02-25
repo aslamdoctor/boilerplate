@@ -185,5 +185,7 @@ input, button, select, textarea, .form-control {
     margin: 0px 0px 20px 0px; }
     #tinymce blockquote p:last-child {
       margin-bottom: 0px; }
+  #tinymce img[data-wp-more] {
+    height: 16px; }
 
 /*# sourceMappingURL=custom-editor-styles.css.map */

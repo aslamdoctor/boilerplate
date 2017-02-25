@@ -29,5 +29,10 @@ input, button, select, textarea, .form-control {
 #tinymce{
 	padding:15px !important;
 	@include typography;
+	
+	img[data-wp-more]{
+		height:16px;
+	}
 }
+
 // #tinymce ends
