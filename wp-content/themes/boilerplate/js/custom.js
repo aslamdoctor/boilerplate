@@ -1,5 +1,5 @@
 (function($) {
-
+	// On Dom Ready
 	$(document).ready(function() {
 		featured_posts_carousel();
 		related_posts_carousel();
@@ -10,6 +10,18 @@
 			$(this).toggleClass('is-active');
 			slideout.toggle();
 		});
+
+		// Disable slideout on carousel touch
+	    $('.the-carousel').bind('touchstart', function(e) {
+	        slideout.disableTouch();
+	    });
+	    $('.the-carousel').bind('touchend', function(e) {
+	        slideout.enableTouch();
+	    });
+	});
+
+	// After page loaded completely
+	$(window).bind("load", function() {
 	});
 
 })(jQuery);
