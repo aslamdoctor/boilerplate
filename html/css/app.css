@@ -36,9 +36,6 @@
   zoom: 1; }
 
 /* IE < 8 */
-body, html {
-  height: 100%; }
-
 input {
   line-height: normal; }
 
@@ -103,7 +100,8 @@ i {
   will-change: transform;
   background-color: #FFF;
   /* A background-color is required */
-  min-height: 100vh; }
+  min-height: 100vh;
+  overflow: hidden; }
 
 .slideout-open,
 .slideout-open body,
