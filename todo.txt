@@ -1,0 +1,6 @@
+1. change color variable names
+2. change carousel wrapping
+3. change position absolute mixin
+4. add size(width, height) mixin 
+5. add button normalize mixin
+6. add mixin to add fontawsome icon using css
