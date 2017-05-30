@@ -4,3 +4,4 @@
 4. add size(width, height) mixin 
 5. add button normalize mixin
 6. add mixin to add fontawsome icon using css
+7. Notice: automatic_feed_links is deprecated since version 3.0.0! Use add_theme_support( 'automatic-feed-links' ) instead. in /home/bossmeti/public_html/emilywarna.com/wp-includes/functions.php on line 3830
