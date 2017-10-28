@@ -1,4 +1,4 @@
 @echo off
 :start
-mysqldump -u root -p boilerplate_v2 > database.sql
+mysqldump -u root -p boilerplate > database.sql
 pause
