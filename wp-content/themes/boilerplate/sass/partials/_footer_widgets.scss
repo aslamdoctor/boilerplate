@@ -1,0 +1,20 @@
+#footer-widgets{
+	padding:$section-margin 0px;
+	border-bottom:1px solid #ccc;
+
+	.the-widget{
+		h3.widget-title{
+			font-size:20px;
+		}
+
+		ul{
+			@include reset_ul_block; 
+			li{
+				margin-bottom:5px;
+				a{
+					color:$main_color;
+				}
+			}
+		}
+	}
+}

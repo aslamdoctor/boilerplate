@@ -1,0 +1,79 @@
+/*--- Slideout Menu Styles ---*/
+.slideout-menu {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		width: 256px;
+		min-height: 100vh;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		z-index: 0;
+		display: none;
+}
+
+.slideout-menu-left {
+		left: 0;
+}
+
+.slideout-menu-right {
+		right: 0;
+}
+
+.slideout-panel {
+	position: relative;
+	z-index: 1;
+	will-change: transform;
+	background-color: #FFF; /* A background-color is required */
+	min-height: 100vh;
+	overflow:hidden;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+		overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+		display: block;
+}
+	
+
+/*--- Mobile Menu ---*/
+#menu{
+	padding-top:30px;
+	background-color:#ccc;
+	ul{
+		margin:0px; padding:0px;
+		li{
+			list-style:none;
+			a{
+				display:block; color:$main_color; text-decoration:none;
+				padding:10px 15px; border-bottom:1px solid lighten($main_color, 50%);
+			}
+
+			&:hover, &.current-menu-item, &.current-menu-parent{
+				a{
+					background-color:lighten($main_color, 50%);
+				}
+			}
+
+			ul.sub-menu{
+				li{
+					a{
+						padding-left:30px; background-color:lighten($main_color, 65%);
+					}
+
+					&:hover, &.current-menu-item{
+						a{
+							background-color:lighten($main_color, 50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.the-menu{
+	display:none;
+}

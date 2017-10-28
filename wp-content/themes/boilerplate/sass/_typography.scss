@@ -1,0 +1,106 @@
+body, *{
+	font-family: $font-roboto;
+	color:$main_color;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font-roboto; margin:0px 0px $content-margin 0px; padding:0px;
+	font-weight:$fw-bold;
+}
+
+input, button, select, textarea, .form-control {
+  	font-family: $font-roboto;
+}
+
+// contact form 7
+div.wpcf7-response-output{
+	margin:20px 0px 0px 0px; padding:15px;
+}
+.form-control.wpcf7-not-valid{
+	border:1px solid #f00;
+}
+span.wpcf7-not-valid-tip{
+	display: none;
+}
+
+
+@mixin typography{
+	h1{
+		margin-bottom: $content-margin;
+	}
+	h2{
+		margin-bottom: $content-margin;
+	}
+	h3{
+		margin-bottom: $content-margin;
+	}
+	h4{
+		margin-bottom: $content-margin;
+	}
+	h5{
+		margin-bottom: $content-margin;
+	}
+	h6{
+		margin-bottom: $content-margin;
+	}
+	.alignnone {
+	    margin: 0px 0px $content-margin 0px;
+	}
+	.aligncenter,
+	div.aligncenter {
+	    display: block;
+	    margin: 0px auto $img-margin auto;
+	}
+	.alignright {
+	    float:right;
+	    margin: 0px 0px $img-margin $img-margin;
+	}
+	.alignleft {
+	    float: left;
+	    margin: 0px $img-margin $img-margin 0px;
+	}
+	a img.alignright {
+	    float: right;
+	    margin: 0px 0px $img-margin $img-margin;
+	}
+	a img.alignnone {
+	    margin: 0px 0px $img-margin 0px;
+	}
+	a img.alignleft {
+	    float: left;
+	    margin: 0px $img-margin $img-margin 0px;
+	}
+	a img.aligncenter {
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto
+	}
+	img{
+		height:auto;
+	}
+
+	ul, ol{
+		margin:0px 0px $content-margin 0px; padding:0px 0px 0px 20px; overflow:hidden;
+	}
+
+	a{
+		color:$main_color; text-decoration:underline;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+
+	p{
+		margin:0px 0px $content-margin 0px;
+		&:last-child{
+			margin-bottom:0px;
+		}
+	}
+
+	blockquote{
+		margin:0px 0px $content-margin 0px;
+		p:last-child{
+			margin-bottom:0px;
+		}
+	}
+}

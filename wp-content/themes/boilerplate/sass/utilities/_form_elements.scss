@@ -1,0 +1,22 @@
+.btn-black, a.btn-black{
+	@include reset_button;
+	display: inline-block;
+	height:30px; line-height:30px; padding:0px 15px; 
+	
+	color:$main_color; text-decoration: none !important; border:1px solid #000;
+
+	&:hover{
+		background-color:#000; color:#fff;
+	}
+}
+
+.form-control{
+	@include border-radius(0px);
+	
+	&:focus{
+		border-color:$main_color;
+		outline: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none; 
+	}
+}

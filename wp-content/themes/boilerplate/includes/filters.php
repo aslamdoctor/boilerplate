@@ -1,6 +1,10 @@
 <?php
+// ========== Run shortcodes from widget ==========
+add_filter( 'widget_text', 'do_shortcode' );
 
-// Format page title
+
+
+// ========== Format page title ==========
 function amd_format_page_title( $title, $sep ) {
     global $paged, $page;
 
@@ -21,9 +25,22 @@ function amd_format_page_title( $title, $sep ) {
 
     return $title;
 }
+add_filter( 'wp_title', 'amd_format_page_title', 10, 2 );
 
 
-// Remove empty paragraphs from shortcode string 
+
+// ========== Limit Posts per page for specific archive ==========
+add_filter('pre_get_posts', 'limit_category_posts');
+function limit_category_posts($query){
+    if (is_tax('my_category')) {
+        $query->set('posts_per_page', 5);
+    }
+    return $query;
+}
+
+
+
+// ========== Remove empty paragraphs from shortcode string ==========
 function amd_shortcode_empty_paragraph_fix( $content ) {
     $array = array (
         '<p>[' => '[',
@@ -35,18 +52,33 @@ function amd_shortcode_empty_paragraph_fix( $content ) {
 
     return $content;
 }
+add_filter( 'the_content', 'amd_shortcode_empty_paragraph_fix' );
 
 
-// Add css class to next/prev post links
+
+// ========== Remove P tags from images ==========
+function filter_ptags_on_images($content) {
+    $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('acf_the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'filter_ptags_on_images');
+
+
+
+// ========== Add CSS class to next/prev post links ==========
 function amd_next_posts_link_attributes() {
-    return 'class="older-posts"';
+    return 'class="older-posts btn-black"';
 }
+add_filter( 'next_posts_link_attributes', 'amd_next_posts_link_attributes' );
 function amd_previous_posts_link_attributes() {
-    return 'class="newer-posts"';
+    return 'class="newer-posts btn-black"';
 }
+add_filter( 'previous_posts_link_attributes', 'amd_previous_posts_link_attributes' );
 
 
-// Add css class to parent link of custom post type page
+
+// ========== Add CSS class to parent link of custom post type page ==========
 function amd_remove_parent_classes($class){
     // check for current page classes, return false if they exist.
     //return ($class == 'current_page_item' || $class == 'current_page_parent' || $class == 'current_page_ancestor'  || $class == 'current-menu-item') ? FALSE : TRUE;
@@ -69,9 +101,11 @@ function amd_add_class_to_wp_nav_menu($classes){
     }
     return $classes;
 }
+add_filter( 'nav_menu_css_class', 'amd_add_class_to_wp_nav_menu' );
 
 
-// Display image sizes in media uploader 
+
+// ========== Display image sizes in media uploader ==========
 function amd_display_image_size_names_muploader( $sizes ) {
     $new_sizes = array();
 
@@ -88,34 +122,15 @@ function amd_display_image_size_names_muploader( $sizes ) {
 
     return $new_sizes;
 }
+add_filter( 'image_size_names_choose', 'amd_display_image_size_names_muploader', 11, 1 );
 
 
-// Filter Search result 
+
+//========== Filter Search result ==========
 function amd_search_filter($query) {
-    if ($query->is_search) {
+    /* if ($query->is_search) {
         $query->set('post_type', array('post'));
-    }
+    } */
     return $query;
 }
-
-
-// if no title then add widget content wrapper to before widget
-function amd_check_sidebar_params( $params ) {
-    global $wp_registered_widgets;
-
-    $settings_getter = $wp_registered_widgets[ $params[0]['widget_id'] ]['callback'][0];
-    $settings = $settings_getter->get_settings();
-    $settings = $settings[ $params[1]['number'] ];
-
-    if ( $params[0][ 'after_widget' ] == '</div></div>' && isset( $settings[ 'title' ] ) && empty( $settings[ 'title' ] ) )
-        $params[0][ 'before_widget' ] .= '<div class="widget-content">';
-
-    return $params;
-}
-
-
-// remove YARPP styles
-function amd_dequeue_footer_styles(){
-  wp_dequeue_style('yarppRelatedCss');
-  wp_dequeue_style('yarpp-thumbnails-yarpp-thumbnail');
-}
+add_filter( 'pre_get_posts', 'amd_search_filter' );

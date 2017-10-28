@@ -1,0 +1,31 @@
+/*--- Common proctice to hide slider and show it when its fully loaded */
+.the-carousel{
+	display: none;
+	position:relative;
+	.slick-prev, .slick-next{
+		@include vertical-align; z-index:10; text-align:center;
+		width:30px; height:30px; border:none; padding:0px;
+		background-color:#fff; border:1px solid #000;
+		@include transition;
+		i.fa{
+			font-size:20px;
+		}
+
+		&:hover{
+			background-color:#000; 
+			i.fa{
+				color:#fff;
+			}
+		}
+	}
+	.slick-prev{
+		left:0px;
+	}
+	.slick-next{
+		right:0px;
+	}
+
+	&.slick-initialized { 
+		display: block; 
+	}
+}

@@ -1,0 +1,21 @@
+#content{
+	padding:$section-margin 0px;
+	border-bottom:1px solid #ccc;
+
+	h1.page-title{
+		margin-bottom:$section-margin;
+	}
+
+	.page-content{
+		@include typography;	
+
+		#contact-map{
+			margin-bottom:$section-margin;
+		}
+
+		.featured-image{
+			margin-bottom:$section_margin; 
+			width:100%; height:auto;
+		}
+	}
+}

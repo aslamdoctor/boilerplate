@@ -1,6 +1,18 @@
 <?php
+// ========== Get Post Thumbnail ==========
+function get_thumb($size="thumbnail", $class="post-thumb", $placeholder=''){
+	if ( has_post_thumbnail() ){
+		the_post_thumbnail( $size, array('class' => $class ) );
+	}
+	else{
+		if(!empty($placeholder)){
+			echo '<img src="'.$placeholder.'" class="'.$class.'" alt="">';
+		}
+	}
+}
 
-// Crop text
+
+// ========== Crop text ==========
 function crop_text($text, $length=50){
     if(strlen($text)<=$length){
         return $text;
@@ -13,7 +25,7 @@ function crop_text($text, $length=50){
 }
 
 
-// Numeric pagination 
+// ========== Numeric pagination ==========
 function numeric_pagination() {
     if( is_singular() )
         return;
@@ -82,7 +94,7 @@ function numeric_pagination() {
 }
 
 
-// Custom excerpt
+// ========== Custom Excerpt ==========
 function get_excerpt($limit) {
     $get_content = get_the_content();
     $get_content = strip_tags($get_content);
@@ -101,7 +113,7 @@ function get_excerpt($limit) {
 }
 
 
-// Breadcrumb 
+// ========== Breadcrumb ==========
 function the_breadcrumb () {
     // Settings
     $separator  = '&gt;';
@@ -238,5 +250,4 @@ function the_breadcrumb () {
     }
 
     echo '</ul>';
-
 }
