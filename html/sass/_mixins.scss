@@ -133,7 +133,7 @@
 
 
 @mixin reset_button(){
-	padding:0px; border:none; background:none; @include border-radius(0px);
+	padding:0px; border:none; background:none; @include border-radius(0px); text-align:center;
 }
 
 @mixin reset_ul(){
@@ -165,5 +165,20 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
+	}
+}
+
+@mixin placeholder(){
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		@content;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		@content;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+		@content;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		@content;
 	}
 }

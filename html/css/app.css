@@ -45,6 +45,10 @@
   left: 0px;
   right: 0px; }
 
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
 input {
   line-height: normal; }
 
@@ -950,6 +954,7 @@ span.wpcf7-not-valid-tip {
   -o-border-radius: 0px;
   border-radius: 0px;
   background-clip: padding-box;
+  text-align: center;
   display: inline-block;
   height: 30px;
   line-height: 30px;
@@ -1069,6 +1074,7 @@ span.wpcf7-not-valid-tip {
     -o-border-radius: 0px;
     border-radius: 0px;
     background-clip: padding-box;
+    text-align: center;
     float: right; }
 
 #footer {
