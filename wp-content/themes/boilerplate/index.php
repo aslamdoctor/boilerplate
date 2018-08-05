@@ -5,7 +5,7 @@
 	<section id="posts">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-md-12">
 					<h2>Latest Posts</h2>
 				</div>
 			</div>
@@ -17,7 +17,7 @@
 			<?php else: ?>
 
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-md-12">
 					<h2>Nothing found</h2>
 				</div>
 			</div>

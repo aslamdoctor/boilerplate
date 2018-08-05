@@ -1,22 +1,18 @@
-// Base, Mixins, Helpers & Variables
-@import "mixins";
-@import "variables";
-@import "helpers";
-@import "base";
-@import "typography";
+// Libraries
+@import "../lib/bootstrap/bootstrap.min.css";
+@import "../lib/fontawsome/css/font-awesome.min.css";
+@import "../lib/slick/slick.css";
+@import "../lib/hamburgers/hamburgers";
 
-
-// Third Party
-@import "vendor/bootstrap.min.css";
-@import "vendor/font-awesome.min.css";
-@import "../js/slick/slick";
-@import "vendor/hamburgers/hamburgers";
+// Configurations
+@import "utilities/fonts";
+@import "utilities/variables";
 
 // Utilities
-@import "utilities/desktop_first";
-@import "utilities/slideout";
-@import "utilities/carousel";
-@import "utilities/form_elements";
+@import "utilities/media_queries.scss";
+@import "utilities/mixins";
+@import "utilities/helpers";
+@import "utilities/global";
 
 // Partials
 @import "partials/header";

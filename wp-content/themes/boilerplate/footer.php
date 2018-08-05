@@ -1,7 +1,7 @@
-<section id="footer" class="clearfix">
+	<section id="footer" class="clearfix">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-md-6">
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'footer-menu',
@@ -11,7 +11,7 @@
 					) );
 					?>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-6">
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'socialmedia-menu',
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 copyright text-center">
+				<div class="col-md-12 copyright text-center">
 					&copy; Boilerplate. All rights reserved.
 				</div>
 			</div>
@@ -31,10 +31,6 @@
 	</section>
 	<!-- #footer ends -->
 
-
-	</main>
-	<!-- #panel ends -->
-	
 	
 	<?php wp_footer(); ?>
 

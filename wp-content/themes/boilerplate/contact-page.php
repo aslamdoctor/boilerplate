@@ -10,7 +10,7 @@
     <section id="content">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-12">
                     <h1 class="page-title"><?php the_title();?></h1>
 
                     <?php
@@ -27,10 +27,10 @@
 						</div>
 
                         <div class="row">
-							<div class="col-sm-6">
+							<div class="col-md-6">
 								<?php the_content();?>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-md-6">
 								<h3>Send Your Message</h3>
 
 								<div class="contact-form">

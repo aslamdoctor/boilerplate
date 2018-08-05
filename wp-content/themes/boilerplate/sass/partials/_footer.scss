@@ -1,5 +1,5 @@
 #footer{
-	padding:$section_margin 0px;
+	padding:$content-margin 0px;
 
 	ul.footer-menu{
 		@include reset_ul;
@@ -36,16 +36,16 @@
 	}
 
 	.copyright{
-		margin-top: $section_margin;
+		margin-top: $content-margin;
 	}
 
 	
-	@include mobile{
+	@include mq_down($md){	
 		ul.footer-menu,
 		ul.socialmedia-menu{
 			@include flex; @include flex-center; float:none;
 			margin-bottom:$content-margin;
 		}
 	}
-	// @mobile
+	// mq_down_md
 }

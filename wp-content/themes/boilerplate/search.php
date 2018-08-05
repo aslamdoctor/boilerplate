@@ -3,7 +3,7 @@
 	<section id="posts">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-md-12">
 				<h1 class="page-title">Search: <?php echo get_search_query(); ?></h1>
 				</div>
 			</div>
@@ -16,7 +16,7 @@
 			<?php 	else: ?>
 
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-md-12">
 					<h2>Nothing found</h2>
 				</div>
 			</div>

@@ -10,7 +10,7 @@
 <section id="content" class="clearfix">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-md-12">
 				<h1 class="page-title"><?php the_title();?></h1>
 
 				<div class="page-content">

@@ -1,0 +1,105 @@
+$menu_width:207px;
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.menu{
+	display: none;
+}
+
+.slideout-menu {
+	position: fixed;
+	top: 10px;
+	bottom: 0;
+	width: $menu_width;
+	min-height: 100vh;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	z-index: 0;
+	display: none;
+	background-color:#ffffff;
+	padding-top:17px;
+	padding-bottom:15px;
+
+	ul{
+		line-height:1;
+		@include reset_ul_block;
+		margin-bottom:28px;
+		li{
+			a{
+				font-size:10px; font-weight:$fw-bold; text-transform: uppercase; color:$main_color; letter-spacing:.1em;
+				display: block; height:40px; line-height:40px;
+				padding:0px 18px;
+				position:relative;
+			}
+
+			ul.sub-menu{
+				background-color:#faf4eb;
+				margin-bottom:0px;
+				display: none;
+			}
+
+			&.menu-item-has-children{
+				> a{
+					&::after{
+						content:""; display: block;
+						width:10px; height:7px; background:url(../img/arrow_down.svg) center center no-repeat;
+						position:absolute; right:18px; top:16px;
+						@include transition;
+					}
+				}
+			}
+			&.active{
+				> a{
+					&::after{
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+
+		&.socialmedia-links{
+			li{
+				a{
+					padding-left:46px;
+					svg{
+						@include vertical-align; left:18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.slideout-menu-left {
+	left: 0;
+}
+
+.slideout-menu-right {
+	right: 0;
+}
+
+.slideout-panel {
+	position: relative;
+	z-index: 1;
+//	will-change: transform;
+	background-color: #ccc; /* A background-color is required */
+	min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+	overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+	display: block;
+}
+
+/* nav#menu{
+	display: none;
+}
+ */

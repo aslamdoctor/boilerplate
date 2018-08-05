@@ -68,11 +68,11 @@ add_filter('the_content', 'filter_ptags_on_images');
 
 // ========== Add CSS class to next/prev post links ==========
 function amd_next_posts_link_attributes() {
-    return 'class="older-posts btn-black"';
+    return 'class="older-posts the-button"';
 }
 add_filter( 'next_posts_link_attributes', 'amd_next_posts_link_attributes' );
 function amd_previous_posts_link_attributes() {
-    return 'class="newer-posts btn-black"';
+    return 'class="newer-posts the-button"';
 }
 add_filter( 'previous_posts_link_attributes', 'amd_previous_posts_link_attributes' );
 

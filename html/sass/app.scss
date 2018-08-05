@@ -1,0 +1,19 @@
+// Libraries
+@import "../lib/bootstrap/bootstrap.min.css";
+@import "../lib/fontawsome/css/font-awesome.min.css";
+@import "../lib/slick/slick.css";
+@import "../lib/hamburgers/hamburgers";
+
+// Configurations
+@import "utilities/fonts";
+@import "utilities/variables";
+
+// Utilities
+@import "utilities/media_queries.scss";
+@import "utilities/mixins";
+@import "utilities/helpers";
+@import "utilities/global";
+
+// Partials
+@import "partials/header";
+@import "partials/footer";

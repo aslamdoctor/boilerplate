@@ -3,7 +3,7 @@
 	<section id="posts">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-12">
 				<?php /* If this is a category archive */ if (is_category()) { ?>
 					<h1 class="page-title"><?php single_cat_title(); ?></h1>
 				<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
@@ -30,7 +30,7 @@
 			<?php 	else: ?>
 
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-12">
 					<h2>Nothing found</h2>
 				</div>
 			</div>

@@ -22,28 +22,13 @@
 
 <body <?php body_class(); ?>>
 
-	<nav id="menu" class="the-menu">
-		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'mobile-menu',
-			'menu_id' => 'mobile-menu',
-			'menu_class' => 'mobile-menu',
-			'container' => false
-		) );
-		?>
-	</nav>
-	<!-- #menu ends -->
-
-	<main id="panel">
-
-	
 	<section id="header" class="clearfix">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<a href="<? bloginfo('url'); ?>/" class="logo"><img src="http://placehold.it/150x150" alt=""></a>
 
-					<button class="btn-mobile-menu hamburger hamburger--slider visible-sm visible-xs" type="button">
+					<button class="btn-mobile-menu hamburger hamburger--slider d-lg-none" type="button">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
