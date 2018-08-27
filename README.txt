@@ -21,7 +21,7 @@ _____██░░░░░░░░░██
 TODO:
 1. Add Slick Center Mixin as below 
 
-```sh
+```
 .slick-track{
 	display: flex;
 	
