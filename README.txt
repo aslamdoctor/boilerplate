@@ -21,7 +21,7 @@ _____██░░░░░░░░░██
 TODO:
 1. Add Slick Center Mixin as below 
 
-```
+---------------------------------
 .slick-track{
 	display: flex;
 	
@@ -32,4 +32,4 @@ TODO:
 		justify-content: center; //optional
 	}
 }
-```
+---------------------------------
