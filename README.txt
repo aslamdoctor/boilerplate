@@ -16,3 +16,20 @@ _____██░░░░░░░░░██
 -______██████████
 -_____██▓▓▓▓▓▓▓▓▓██
 -_____█████████████
+
+
+TODO:
+1. Add Slick Center Mixin as below 
+
+```sh
+.slick-track{
+	display: flex;
+	
+	.slick-slide{
+		display: flex;
+		height: auto;
+		align-items: center; //optional
+		justify-content: center; //optional
+	}
+}
+```
