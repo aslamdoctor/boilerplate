@@ -23,7 +23,7 @@
 	<!-- #content ends -->
 
 
-    <?php related_posts();?>
+    <?php //related_posts();?>
 
 	<?php get_template_part("includes/_comments");?>
 	
