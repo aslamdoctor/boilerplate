@@ -35,7 +35,7 @@ require_once AI1WM_VENDOR_PATH .
 			'Bandar.php';
 
 
-if ( class_exists( 'WP_CLI' ) ) {
+if ( defined( 'WP_CLI' ) ) {
 	require_once AI1WM_VENDOR_PATH .
 				DIRECTORY_SEPARATOR .
 				'servmask' .
@@ -124,14 +124,6 @@ require_once AI1WM_VENDOR_PATH .
 			'filter' .
 			DIRECTORY_SEPARATOR .
 			'class-ai1wm-recursive-exclude-filter.php';
-
-require_once AI1WM_VENDOR_PATH .
-			DIRECTORY_SEPARATOR .
-			'servmask' .
-			DIRECTORY_SEPARATOR .
-			'filter' .
-			DIRECTORY_SEPARATOR .
-			'class-ai1wm-recursive-newline-filter.php';
 
 require_once AI1WM_VENDOR_PATH .
 			DIRECTORY_SEPARATOR .
