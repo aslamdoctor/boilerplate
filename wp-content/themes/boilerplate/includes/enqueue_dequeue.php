@@ -19,13 +19,3 @@ function amd_enqueue(){
 }
 
 add_action( 'wp_enqueue_scripts', 'amd_enqueue' );
-
-
-
-// Dequeue/Remove Styles/JS from footer
-function amd_dequeue_footer_styles(){
-	// Yarpp plugin styles if included
-	wp_dequeue_style('yarppRelatedCss');
-	wp_dequeue_style('yarpp-thumbnails-yarpp-thumbnail');
-}
-add_action( 'get_footer','amd_dequeue_footer_styles');
