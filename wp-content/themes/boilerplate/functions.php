@@ -1,20 +1,18 @@
 <?php
 // All Includes
-include( get_template_directory() . '/includes/setup.php' );
+include( get_template_directory() . '/inc/setup.php' );
 
-include( get_template_directory() . '/includes/enqueue_dequeue.php' );
+include( get_template_directory() . '/inc/enqueue.php' );
 
-include( get_template_directory() . '/includes/widgets.php' );
+include( get_template_directory() . '/inc/widgets.php' );
 
-include( get_template_directory() . '/includes/actions.php' );
+include( get_template_directory() . '/inc/hooks.php' );
 
-include( get_template_directory() . '/includes/filters.php' );
+include( get_template_directory() . '/inc/shortcodes.php' );
 
-include( get_template_directory() . '/includes/shortcodes.php' );
+include( get_template_directory() . '/inc/custom_functions.php' );
 
-include( get_template_directory() . '/includes/custom_functions.php' );
-
-//include( get_template_directory() . '/includes/theme_options.php' ); 
+//include( get_template_directory() . '/inc/theme_options.php' ); 
 
 
 

@@ -11,7 +11,7 @@
 			<?php 	if (have_posts()) :?>
 			<?php 	$post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
-			<?php 	get_template_part("includes/_loop_posts");?>
+			<?php 	get_template_part("template-parts/_loop_posts");?>
 
 			<?php 	else: ?>
 

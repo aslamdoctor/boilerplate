@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<?php get_template_part('includes/_featured_posts');?>
+	<?php get_template_part('template-parts/_featured_posts');?>
 
 	<section id="posts">
 		<div class="container">
@@ -12,7 +12,7 @@
 
 			<?php if (have_posts()) :?>
 			
-			<?php get_template_part("includes/_loop_posts");?>
+			<?php get_template_part("template-parts/_loop_posts");?>
 
 			<?php else: ?>
 

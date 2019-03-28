@@ -25,9 +25,9 @@
 
     <?php //related_posts();?>
 
-	<?php get_template_part("includes/_comments");?>
+	<?php get_template_part("template-parts/_comments");?>
 	
-	<?php get_template_part("includes/_footer_widgets");?>
+	<?php get_template_part("template-parts/_footer_widgets");?>
 
 <?php endwhile; endif; ?>
 
