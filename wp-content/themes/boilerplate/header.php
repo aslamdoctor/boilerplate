@@ -26,7 +26,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<a href="<? bloginfo('url'); ?>/" class="logo"><img src="http://placehold.it/150x150" alt=""></a>
+					<a href="<?php bloginfo('url'); ?>/" class="logo"><img src="http://placehold.it/150x150" alt=""></a>
 
 					<button class="btn-mobile-menu hamburger hamburger--slider d-lg-none" type="button">
 						<span class="hamburger-box">

@@ -2,42 +2,100 @@
 $config = array(
 	'thumbnails' => [
 		array(
-			'size_name' => 'featured-image',
-			'width' => 1200,
-			'height' => 400,
-			'crop' => true
-		),
-		array(
-			'size_name' => 'post-thumbnail',
-			'width' => 100,
-			'height' => 100,
-			'crop' => true
+			'size_name' => 'banner-d',
+			'width' => 2408,
+			'height' => 1240,
+			'crop' => 'true'
 		),
 	],
-	'generate_placeholder_images' => true,
+	'generate_placeholder_images' => "true",
 	'menus' => [
 		array(
-			'menu_name' => 'Top Menu',
-			'menu_slug' => 'top-menu',
+			'menu_name' => 'Topics Menu',
+			'menu_slug' => 'topics-menu',
 		),
 		array(
-			'menu_name' => 'Mobile Menu',
-			'menu_slug' => 'mobile-menu',
+			'menu_name' => 'Topics Menu - Footer',
+			'menu_slug' => 'topics-menu-footer',
 		),
 		array(
-			'menu_name' => 'Footer Menu',
-			'menu_slug' => 'footer-menu',
+			'menu_name' => 'Find out more Menu',
+			'menu_slug' => 'findoutmore-menu',
 		),
 	],
 	'custom_templates' => [
+		
 		array(
-			'template_name' => 'Home Page',
-			'file_name' => 'home-page.php',
+			'template_name' => 'Site Front Page',
+			'file_name' => 'site-front-page.php',
+		),
+		
+		array(
+			'template_name' => 'OAH - Landing Page',
+			'file_name' => 'oah-landing-page.php',
 		),
 		array(
-			'template_name' => 'Contact Page',
-			'file_name' => 'contact-page.php',
+			'template_name' => 'OAH - About Us',
+			'file_name' => 'oah-aboutus-page.php',
 		),
+		array(
+			'template_name' => 'OAH - Contact Us',
+			'file_name' => 'oah-contactus-page.php',
+		),
+		array(
+			'template_name' => 'OAH - Testimonials',
+			'file_name' => 'oah-testimonials-page.php',
+		),
+		array(
+			'template_name' => 'OAH - Services',
+			'file_name' => 'oah-services-page.php',
+		),
+		array(
+			'template_name' => 'OAH - Service Child',
+			'file_name' => 'oah-service-child-page.php',
+		),
+		
+		array(
+			'template_name' => 'YT - Landing Page',
+			'file_name' => 'yt-landing-page.php',
+		),
+		array(
+			'template_name' => 'YT - About Us',
+			'file_name' => 'yt-aboutus-page.php',
+		),
+		array(
+			'template_name' => 'YT - Contact Us',
+			'file_name' => 'yt-contactus-page.php',
+		),
+		array(
+			'template_name' => 'YT - Testimonials',
+			'file_name' => 'yt-testimonials-page.php',
+		),
+		array(
+			'template_name' => 'YT - Services',
+			'file_name' => 'yt-services-page.php',
+		),
+		array(
+			'template_name' => 'YT - Bespoke Training',
+			'file_name' => 'yt-bespoke-training-page.php',
+		),
+		array(
+			'template_name' => 'YT - Course Child',
+			'file_name' => 'yt-course-child-page.php',
+		),
+		array(
+			'template_name' => 'YT - Mock Trails & Investigation',
+			'file_name' => 'yt-mocktrails-page.php',
+		),
+		array(
+			'template_name' => 'YT - Stress Testing',
+			'file_name' => 'yt-stress-testing-page.php',
+		),
+		array(
+			'template_name' => 'YT - Online Training',
+			'file_name' => 'yt-online-training-page.php',
+		),
+		
 	]
 );
 
@@ -47,11 +105,11 @@ $thumbnails_code = '';
 $thumbnails = @$config['thumbnails'];
 if($thumbnails){
 	foreach($thumbnails as $thumbnail){
-		$thumbnails_code.="add_image_size( '".$thumbnail['size_name']."', ".$thumbnail['width'].", ".$thumbnail['height'].", ".$thumbnail['height']." ); \n";
+		$thumbnails_code.="add_image_size( '".$thumbnail['size_name']."', ".$thumbnail['width'].", ".$thumbnail['height'].", ".$thumbnail['crop']." ); \n";
 
 		// generate placeholder images
 		if($config['generate_placeholder_images'] == true){
-			generate_image($thumbnail['size_name'], $thumbnail['width'], $thumbnail['height'], '#b9b9b9');
+			generate_image($thumbnail['size_name'], $thumbnail['width'], $thumbnail['height'], '#f1f0fd');
 		}
 	}
 
@@ -90,11 +148,39 @@ if($custom_templates){
 	echo '<hr/>';
 	foreach($custom_templates as $custom_template){
 		$template_code = 
-"<?php
+'<?php
 /*
-*  Template Name: ".$custom_template['template_name']."
+*  Template Name: '.$custom_template['template_name'].'
 */
-?>";	
+?>
+<?php get_header(); ?>
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+<section id="content" class="clearfix">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="page-title"><?php the_title();?></h1>
+
+				<div class="page-content">
+					<?php get_thumb("featured-1200x400", "featured-image", ""); ?>
+
+					<?php the_content();?>
+				</div>
+				<!-- /.page-content -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- #content ends -->
+
+<?php endwhile; endif; ?>
+
+<?php get_footer(); ?>
+
+<?php get_footer(); ?>
+';	
 		$template_file_name = $custom_template['file_name'];
 		file_put_contents("generated_files/".$template_file_name, $template_code);
 
