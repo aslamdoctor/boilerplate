@@ -10,90 +10,18 @@ $config = array(
 	],
 	'generate_placeholder_images' => "true",
 	'menus' => [
+		
 		array(
 			'menu_name' => 'Topics Menu',
 			'menu_slug' => 'topics-menu',
 		),
-		array(
-			'menu_name' => 'Topics Menu - Footer',
-			'menu_slug' => 'topics-menu-footer',
-		),
-		array(
-			'menu_name' => 'Find out more Menu',
-			'menu_slug' => 'findoutmore-menu',
-		),
+
 	],
 	'custom_templates' => [
 		
 		array(
 			'template_name' => 'Site Front Page',
 			'file_name' => 'site-front-page.php',
-		),
-		
-		array(
-			'template_name' => 'OAH - Landing Page',
-			'file_name' => 'oah-landing-page.php',
-		),
-		array(
-			'template_name' => 'OAH - About Us',
-			'file_name' => 'oah-aboutus-page.php',
-		),
-		array(
-			'template_name' => 'OAH - Contact Us',
-			'file_name' => 'oah-contactus-page.php',
-		),
-		array(
-			'template_name' => 'OAH - Testimonials',
-			'file_name' => 'oah-testimonials-page.php',
-		),
-		array(
-			'template_name' => 'OAH - Services',
-			'file_name' => 'oah-services-page.php',
-		),
-		array(
-			'template_name' => 'OAH - Service Child',
-			'file_name' => 'oah-service-child-page.php',
-		),
-		
-		array(
-			'template_name' => 'YT - Landing Page',
-			'file_name' => 'yt-landing-page.php',
-		),
-		array(
-			'template_name' => 'YT - About Us',
-			'file_name' => 'yt-aboutus-page.php',
-		),
-		array(
-			'template_name' => 'YT - Contact Us',
-			'file_name' => 'yt-contactus-page.php',
-		),
-		array(
-			'template_name' => 'YT - Testimonials',
-			'file_name' => 'yt-testimonials-page.php',
-		),
-		array(
-			'template_name' => 'YT - Services',
-			'file_name' => 'yt-services-page.php',
-		),
-		array(
-			'template_name' => 'YT - Bespoke Training',
-			'file_name' => 'yt-bespoke-training-page.php',
-		),
-		array(
-			'template_name' => 'YT - Course Child',
-			'file_name' => 'yt-course-child-page.php',
-		),
-		array(
-			'template_name' => 'YT - Mock Trails & Investigation',
-			'file_name' => 'yt-mocktrails-page.php',
-		),
-		array(
-			'template_name' => 'YT - Stress Testing',
-			'file_name' => 'yt-stress-testing-page.php',
-		),
-		array(
-			'template_name' => 'YT - Online Training',
-			'file_name' => 'yt-online-training-page.php',
 		),
 		
 	]
@@ -176,8 +104,6 @@ if($custom_templates){
 <!-- #content ends -->
 
 <?php endwhile; endif; ?>
-
-<?php get_footer(); ?>
 
 <?php get_footer(); ?>
 ';	
