@@ -126,6 +126,10 @@ if(!empty($thumbnails_code)){
 if(!empty($menus_code)){
 	$generated_code .= $menus_code."\n\n\n";;
 }
+
+if (!file_exists('generated_files')) {
+	mkdir("generated_files");
+}
 file_put_contents("generated_files/snippets.php", $generated_code);
 
 
